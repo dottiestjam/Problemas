@@ -39,7 +39,9 @@ public class Problemas {
                 case 5: 
                     adiv();
                     break;
-                    
+                case 6:
+                    verDeuda();
+                    break;      
             }
         }while(true);
     }
@@ -142,4 +144,10 @@ public class Problemas {
         
     }
     
+    public static void verDeuda(){
+        deuda d1 = new deuda();
+        int cont = d1.resolver();
+        System.out.println(cont);
+        
+    }    
 }
