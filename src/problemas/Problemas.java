@@ -36,6 +36,9 @@ public class Problemas {
                 case 3:
                     multi();
                     break;
+                case 5: 
+                    adiv();
+                    break;
                     
             }
         }while(true);
@@ -106,6 +109,34 @@ public class Problemas {
                 flag = false;
             }
             
+        }while(flag);
+        
+    }
+    
+    public static void adiv(){
+        Scanner scan = new Scanner(System.in);
+        adivinanza a1 = new adivinanza();
+        boolean flag = true;
+        int numero = 0;
+        String res = "";
+        do{
+            System.out.println("Introduce un numero para adivinar");
+            numero = scan.nextInt();
+            
+            res = a1.evaluar(numero);
+
+            
+            if (res.equals("Correcto")){
+                System.out.println("Numero correcto");
+                flag = false;
+            }
+            
+            if(res.equals("Mayor")){
+                System.out.println("Es mayor el numero");
+            }
+            if (res.equals("Menor")){
+                System.out.println("Es menor el numero");
+            }
             
         }while(flag);
         
